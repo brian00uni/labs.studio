@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+/* ─────────────────────────────────────────────────────────────
+   Labs Studio — design tokens (Tailwind v4 @theme)
+   네이비 + 앰버/골드. 앰버는 강조어·버튼·숫자·점에만 좁게.
+   배경마다 앰버 명도를 다르게: 어두운 배경 = 밝은 앰버,
+   흰 배경 = 어두운 앰버(WCAG 대비 확보).
+   ───────────────────────────────────────────────────────────── */
+@theme {
+  /* Navy scale */
+  --color-navy-950: #0a1530;
+  --color-navy-900: #0e1c3d;
+  --color-navy-850: #122348;
+  --color-navy-800: #16294f;
+  --color-navy-700: #1f3563;
+
+  /* Amber / gold scale */
+  --color-amber-bright: #e8a93c; /* 어두운 배경 강조 */
+  --color-amber-soft: #f0c168;
+  --color-amber-deep: #a06a12; /* 흰 배경 텍스트 (대비 확보) */
+  --color-amber-ink: #5c3d08; /* 풀앰버 면 위 텍스트 */
+
+  /* Neutrals */
+  --color-paper: #f7f8fb;
+  --color-paper-200: #eef0f5;
+  --color-ink: #14181f;
+  --color-ink-soft: #4a5160;
+
+  --font-sans: 'Inter', 'Noto Sans KR', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-navy-900);
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Respect reduced-motion (접근성) */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-amber-bright);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* Scroll-reveal helper */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+@utility reveal-in {
+  opacity: 1;
+  transform: none;
+}
