@@ -1,3 +1,4 @@
+import { LuSparkles } from 'react-icons/lu'
 import { labs } from '../data/content'
 import { Reveal } from './Reveal'
 import { RichText } from './RichText'
@@ -32,11 +33,11 @@ export function Labs() {
         </Reveal>
 
         <Reveal delay={80}>
-          <ul className="mt-10 flex flex-wrap items-center gap-2.5">
+          <ul className="mt-10 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
             {labs.items.map((item) => (
               <li key={item.label}>
                 <span
-                  className="group inline-flex flex-col rounded-lg border border-amber-deep/20 bg-amber-bright/10 px-4 py-2.5"
+                  className="group flex h-full flex-col rounded-lg border border-amber-deep/20 bg-amber-bright/10 px-4 py-2.5"
                   title={item.verified}
                 >
                   <span className="text-sm font-semibold text-amber-deep">{item.label}</span>
@@ -44,6 +45,13 @@ export function Labs() {
                 </span>
               </li>
             ))}
+            {/* 마지막 칸 — 준비중 플레이스홀더 */}
+            <li>
+              <span className="flex h-full flex-col items-center justify-center gap-1.5 rounded-lg border border-dashed border-amber-deep/30 px-4 py-2.5 text-center">
+                <LuSparkles className="h-5 w-5 text-amber-deep/60" aria-hidden />
+                <span className="text-sm font-semibold text-ink-soft/50">App 준비중...</span>
+              </span>
+            </li>
             {/* Labs 둘러보기 링크 — 임시 숨김
             <li>
               <a

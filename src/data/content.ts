@@ -125,24 +125,25 @@ export const whatIDo: {
   title: '하나의 방식만 고집하지 않습니다',
   body: 'Vue2 레거시 유지보수부터 Vue3 · React 신규 개발까지, <br />프로젝트가 요구하는 방식에 맞춥니다.',
   // 일하는 방식 — 강점 4가지
+  // icon 값은 WhatIDo.tsx의 strengthIcons 맵(키 → react-icons)과 연결
   strengths: [
     {
-      icon: '⇄',
+      icon: 'exchange',
       title: '레거시와 최신을 동시에',
       desc: '한 서비스 안에서 Vue2 검진 파트와 Vue3 케어 파트를 병행 개발하며 버전 차이를 흡수했습니다.',
     },
     {
-      icon: '◉',
+      icon: 'accessibility',
       title: '접근성을 먼저 챙김',
       desc: 'W3C · WCAG를 기본으로, 고령층 · 저시력자용 큰글씨 모드를 선제 제안 · 구현. WA 인증마크 획득에 기여.',
     },
     {
-      icon: '▦',
+      icon: 'component',
       title: '재사용 컴포넌트 설계',
       desc: 'Figma · Zeplin 스펙을 정확히 해석해, 유지보수 효율을 고려한 컴포넌트 기반 화면을 구현합니다.',
     },
     {
-      icon: '⇆',
+      icon: 'collab',
       title: '디자이너 ↔ 개발자 조율',
       desc: 'AIA UX팀 등과 직접 협업하며 요구사항을 정확히 반영하고 일정 · 품질을 함께 관리해 왔습니다.',
     },
@@ -203,9 +204,9 @@ export const whatIDo: {
     'Git',
   ],
   // 포커스 문장(검정 강조 섹션) — accent 구절은 앰버로 강조
-  quoteEyebrow: '사용자 중심의 UI · Interaction 설계',
+  quoteEyebrow: 'React · Vue 어느 환경이든,<br  /> 팀의 컨벤션에 맞춰 재사용 가능한 구조로 제작합니다.',
   quote:
-    'React · Vue 어느 환경이든,<br /> 팀의 컨벤션에 맞춰 <span class="text-amber-bright">재사용 가능한 구조</span>로 제작합니다.',
+    '사용자 중심의 UI · Interaction 설계',
 }
 
 // ── 04 PROJECTS ──────────────────────────────────────────
@@ -488,7 +489,7 @@ export const trackRecord = {
 export const labs = {
   eyebrow: '06 · LABS',
   title: '일이 아니어도, 만듭니다',
-  body: '호기심으로 만든 작은 실험들. 새 기술을 직접 검증하는 공간입니다.',
+  body: 'AI를 활용한 바이브 코딩으로 빠르게 만들고, GitHub · 오픈소스 생태계를 적극 활용해 실제 동작하는 앱 서비스로 완성합니다. <br />호기심에서 출발한 실험을 ‘쓸 수 있는 제품’까지 끌고 가는 공간입니다.',
   // APPRESSO(appresso.vercel.app) 라인업과 동일하게 — Now 섹션 카드 기준
   items: [
     { label: '가성비대장', verified: '소상공인 배달 손익 계산기' },
@@ -496,6 +497,7 @@ export const labs = {
     { label: '조회수가 터진 영상', verified: '트렌드 발굴' },
     { label: 'Art Studio', verified: 'AI 이미지 생성' },
     { label: 'TTS Studio', verified: 'AI 음성 합성' },
+    { label: '포춘쿠키', verified: '오늘의 운세' },
     { label: '번호 추천기', verified: '번호 빈도 · 패턴 분석' },
   ],
   moreLabel: 'Labs 둘러보기',

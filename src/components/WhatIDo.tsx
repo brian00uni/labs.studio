@@ -1,7 +1,17 @@
+import type { IconType } from 'react-icons'
+import { LuAccessibility, LuArrowLeftRight, LuComponent, LuUsersRound } from 'react-icons/lu'
 import { whatIDo } from '../data/content'
 import { Marquee } from './Marquee'
 import { Reveal } from './Reveal'
 import { RichText } from './RichText'
+
+// 강점 카드 아이콘 — content.ts의 icon 키와 매핑 (제목 성격에 맞춰 선택)
+const strengthIcons: Record<string, IconType> = {
+  exchange: LuArrowLeftRight, // 레거시 ↔ 최신 병행
+  accessibility: LuAccessibility, // 접근성
+  component: LuComponent, // 재사용 컴포넌트
+  collab: LuUsersRound, // 디자이너 ↔ 개발자 협업
+}
 
 export function WhatIDo() {
   return (
@@ -36,18 +46,21 @@ export function WhatIDo() {
         {/* 일하는 방식 — 강점 카드 */}
         <Reveal delay={80}>
           <ul className="mt-12 grid gap-4 sm:grid-cols-2">
-            {whatIDo.strengths.map((s) => (
-              <li
-                key={s.title}
-                className="rounded-2xl border border-paper-200 bg-white p-6 transition-colors hover:border-amber-deep/40"
-              >
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-deep/10 text-xl text-amber-deep">
-                  {s.icon}
-                </span>
-                <h3 className="mt-4 text-lg font-bold text-ink">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.desc}</p>
-              </li>
-            ))}
+            {whatIDo.strengths.map((s) => {
+              const Icon = strengthIcons[s.icon]
+              return (
+                <li
+                  key={s.title}
+                  className="rounded-2xl border border-paper-200 bg-white p-6 transition-colors hover:border-amber-deep/40"
+                >
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-deep/10 text-amber-deep">
+                    {Icon && <Icon className="h-5 w-5" aria-hidden />}
+                  </span>
+                  <h3 className="mt-4 text-lg font-bold text-ink">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.desc}</p>
+                </li>
+              )
+            })}
           </ul>
         </Reveal>
 
@@ -93,9 +106,11 @@ export function WhatIDo() {
     <section className="relative overflow-hidden bg-[#06070d] pt-20 pb-0 sm:pt-28">
       <div className="relative mx-auto max-w-5xl px-5 text-center sm:px-8">
         <Reveal>
-          <p className="font-mono text-xs tracking-[0.24em] text-amber-bright uppercase">
-            {whatIDo.quoteEyebrow}
-          </p>
+          <RichText
+            as="p"
+            className="font-mono text-xs tracking-[0.24em] text-amber-bright uppercase"
+            html={whatIDo.quoteEyebrow}
+          />
           <RichText
             as="p"
             className="mx-auto mt-7 max-w-4xl text-2xl font-extrabold leading-snug tracking-tight text-white sm:text-4xl"
