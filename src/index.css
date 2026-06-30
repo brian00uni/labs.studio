@@ -26,8 +26,32 @@
   --color-ink: #14181f;
   --color-ink-soft: #4a5160;
 
-  --font-sans: 'Inter', 'Noto Sans KR', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-sans: 'SUIT Variable', 'SUIT', ui-sans-serif, system-ui, sans-serif;
+  /* 라벨·뱃지 등도 기본 SUIT으로 통일 (별도 모노스페이스 미사용) */
+  --font-mono: 'SUIT Variable', 'SUIT', ui-sans-serif, system-ui, sans-serif;
+
+  /* Type scale — 기본보다 한 단계씩 크게 (각 토큰을 다음 단계 값으로 시프트).
+     spacing은 그대로 두고 폰트만 키우기 위해 @theme에서 토큰만 재정의. */
+  --text-xs: 0.875rem;
+  --text-xs--line-height: 1.25rem;
+  --text-sm: 1rem;
+  --text-sm--line-height: 1.5rem;
+  --text-base: 1.125rem;
+  --text-base--line-height: 1.75rem;
+  --text-lg: 1.25rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.5rem;
+  --text-xl--line-height: 2rem;
+  --text-2xl: 1.875rem;
+  --text-2xl--line-height: 2.25rem;
+  --text-3xl: 2.25rem;
+  --text-3xl--line-height: 2.5rem;
+  --text-4xl: 3rem;
+  --text-4xl--line-height: 1;
+  --text-5xl: 3.75rem;
+  --text-5xl--line-height: 1;
+  --text-6xl: 4.5rem;
+  --text-6xl--line-height: 1;
 }
 
 @layer base {
@@ -62,6 +86,16 @@
     outline: 2px solid var(--color-amber-bright);
     outline-offset: 3px;
     border-radius: 2px;
+  }
+}
+
+/* 한 줄 마퀴 — 동일 트랙 2벌을 -50% 이동시켜 끊김 없이 반복 */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 

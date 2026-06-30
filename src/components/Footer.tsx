@@ -11,7 +11,7 @@ export function Footer() {
           {footer.brand} {footer.copyright}
         </p>
         {views !== null && (
-          <p className="font-mono text-[11px] text-white/25">
+          <p className="font-mono text-[13px] text-white/25">
             {views.toLocaleString()} views
           </p>
         )}

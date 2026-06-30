@@ -7,8 +7,6 @@ import { TrackRecord } from '../components/TrackRecord'
 import { Labs } from '../components/Labs'
 import { Contact } from '../components/Contact'
 import { Footer } from '../components/Footer'
-import { SectionDivider } from '../components/SectionDivider'
-import { dividers } from '../data/content'
 
 // 서사 순서: HERO → NOW → WHAT I DO → PROJECTS → TRACK RECORD → LABS → CONTACT
 export default function Home() {
@@ -17,19 +15,12 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <SectionDivider label={dividers.hero} />
         <Now />
-        <SectionDivider label={dividers.now} />
         <WhatIDo />
-        <SectionDivider label={dividers.what} />
         <Projects />
-        <SectionDivider label={dividers.projects} />
         <TrackRecord />
-        <SectionDivider label={dividers.track} />
         <Labs />
-        <SectionDivider label={dividers.labs} />
         <Contact />
-        <SectionDivider label={dividers.contact} />
       </main>
       <Footer />
     </>

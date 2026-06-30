@@ -1,5 +1,6 @@
 import { labs } from '../data/content'
 import { Reveal } from './Reveal'
+import { RichText } from './RichText'
 
 export function Labs() {
   return (
@@ -18,12 +19,16 @@ export function Labs() {
           <p className="font-mono text-xs tracking-[0.22em] text-amber-deep uppercase">
             {labs.eyebrow}
           </p>
-          <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">
-            {labs.title}
-          </h2>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg">
-            {labs.body}
-          </p>
+          <RichText
+            as="h2"
+            className="mt-5 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl"
+            html={labs.title}
+          />
+          <RichText
+            as="p"
+            className="mt-6 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg"
+            html={labs.body}
+          />
         </Reveal>
 
         <Reveal delay={80}>
@@ -35,7 +40,7 @@ export function Labs() {
                   title={item.verified}
                 >
                   <span className="text-sm font-semibold text-amber-deep">{item.label}</span>
-                  <span className="font-mono text-[11px] text-ink-soft/70">{item.verified}</span>
+                  <span className="font-mono text-[13px] text-ink-soft/70">{item.verified}</span>
                 </span>
               </li>
             ))}
