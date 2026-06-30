@@ -489,10 +489,14 @@ export const labs = {
   eyebrow: '06 · LABS',
   title: '일이 아니어도, 만듭니다',
   body: '호기심으로 만든 작은 실험들. 새 기술을 직접 검증하는 공간입니다.',
+  // APPRESSO(appresso.vercel.app) 라인업과 동일하게 — Now 섹션 카드 기준
   items: [
-    { label: '유튜브 검색기', verified: 'YouTube Data API · 검색 UX' },
-    { label: 'TTS 생성기', verified: 'Web Speech API · 음성 합성' },
-    { label: '데이터 분석 도구', verified: '멀티소스 API 폴백 · 시각화' },
+    { label: '가성비대장', verified: '소상공인 배달 손익 계산기' },
+    { label: '유튜브 분석', verified: '채널 · 영상 데이터 분석' },
+    { label: '조회수가 터진 영상', verified: '트렌드 발굴' },
+    { label: 'Art Studio', verified: 'AI 이미지 생성' },
+    { label: 'TTS Studio', verified: 'AI 음성 합성' },
+    { label: '번호 추천기', verified: '번호 빈도 · 패턴 분석' },
   ],
   moreLabel: 'Labs 둘러보기',
   moreHref: '#labs',

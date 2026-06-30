@@ -20,6 +20,7 @@ export function Now() {
             className="mt-6 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg"
             html={now.body}
           />
+          {/* APPRESSO 둘러보기 링크 — 임시 숨김
           {now.link && (
             <a
               href={now.link.href}
@@ -31,6 +32,7 @@ export function Now() {
               <span aria-hidden>↗</span>
             </a>
           )}
+          */}
         </Reveal>
 
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

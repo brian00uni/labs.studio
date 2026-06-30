@@ -44,6 +44,7 @@ export function Labs() {
                 </span>
               </li>
             ))}
+            {/* Labs 둘러보기 링크 — 임시 숨김
             <li>
               <a
                 href={labs.moreHref}
@@ -53,6 +54,7 @@ export function Labs() {
                 <span aria-hidden>→</span>
               </a>
             </li>
+            */}
           </ul>
         </Reveal>
       </div>
