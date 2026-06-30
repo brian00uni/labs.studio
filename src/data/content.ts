@@ -53,8 +53,8 @@ export const now: {
   cards: [
     {
       emoji: '👑',
-      title: '가성비대장',
-      sub: '소상공인 배달 손익 계산기',
+      title: '소상공인 배달 손익 계산기',
+      sub: 'AI 페어 프로그래밍 · 1인 풀스택',
       desc: '메뉴·마진·광고를 한 번에 — 남는 돈이 진짜 실력입니다.',
       stack: ['React', 'Vite', 'TypeScript', 'Supabase', 'Render', 'Vercel', 'AI Pair Programming'],
       badge: '개발 중',
@@ -62,29 +62,29 @@ export const now: {
     },
     {
       emoji: '📊',
-      title: '유튜브 분석',
-      sub: '채널·영상 데이터 분석',
+      title: '유튜브 채널 분석 도구',
+      sub: '채널 · 영상 데이터 등급 분석',
       desc: '채널·영상 데이터를 등급별로 분석하고 성장 지표를 한눈에.',
       stack: ['React', 'TypeScript', 'Supabase', 'Render', 'AI Pair Programming'],
     },
     {
       emoji: '🔥',
-      title: '조회수가 터진 영상',
-      sub: '트렌드 발굴',
+      title: '콘텐츠 트렌드 분석 도구',
+      sub: '플랫폼별 인기 영상 · 키워드',
       desc: '플랫폼별 떡상 영상과 키워드 트렌드를 발굴합니다.',
       stack: ['React', 'TypeScript', 'Render', 'AI Pair Programming'],
     },
     {
       emoji: '🎨',
-      title: 'Art Studio',
-      sub: 'AI 이미지 생성',
+      title: 'AI 이미지 생성 도구',
+      sub: '이미지 일괄 자동 생성',
       desc: 'AI로 이미지를 일괄 자동 생성합니다.',
       stack: ['React', 'TypeScript', 'Render', 'AI Pair Programming'],
     },
     {
       emoji: '🎙️',
-      title: 'TTS Studio',
-      sub: 'AI 음성 합성',
+      title: 'AI 음성 합성 도구',
+      sub: 'TTS 음성 콘텐츠 제작',
       desc: 'AI 음성으로 콘텐츠를 만듭니다.',
       stack: ['React', 'TypeScript', 'Render', 'AI Pair Programming'],
     },
@@ -97,9 +97,9 @@ export const now: {
     // },
     {
       emoji: '🎱',
-      title: '번호 추천기',
-      sub: '번호 빈도·패턴 분석',
-      desc: '당첨번호 빈도·패턴 분석으로 추천번호를 받아보세요.',
+      title: '데이터 통계 분석 도구',
+      sub: '빈도 · 패턴 분석 · 시각화',
+      desc: '번호 데이터의 빈도·패턴을 분석해 추천 조합을 제시합니다.',
       stack: ['React', 'Vite', 'TypeScript', 'Vercel', 'AI Pair Programming'],
     },
   ],
@@ -123,29 +123,34 @@ export const whatIDo: {
 } = {
   eyebrow: '02 · WHAT I DO',
   title: '하나의 방식만 고집하지 않습니다',
-  body: 'Vue2 레거시 유지보수부터 Vue3 · React 신규 개발까지, <br />프로젝트가 요구하는 방식에 맞춥니다.',
-  // 일하는 방식 — 강점 4가지
+  body: 'Vue2 레거시 유지보수부터 Vue3 · React 신규 개발까지 — 프로젝트가 요구하는 방식에 맞춥니다. <br />그리고 지금은, AI 페어 프로그래밍으로 직접 제품까지 만듭니다.',
+  // 일하는 방식 — 강점 5가지
   // icon 값은 WhatIDo.tsx의 strengthIcons 맵(키 → react-icons)과 연결
   strengths: [
     {
       icon: 'exchange',
-      title: '레거시와 최신을 동시에',
-      desc: '한 서비스 안에서 Vue2 검진 파트와 Vue3 케어 파트를 병행 개발하며 버전 차이를 흡수했습니다.',
+      title: '레거시도, 최신도',
+      desc: '한 서비스 안에서 검진(Vue2) · 케어(Vue3) 파트를 병행 개발 — 새 기술로 갈아타는 것만큼, 두 방식이 공존하게 만드는 것도 실력입니다.',
     },
     {
       icon: 'accessibility',
-      title: '접근성을 먼저 챙김',
-      desc: 'W3C · WCAG를 기본으로, 고령층 · 저시력자용 큰글씨 모드를 선제 제안 · 구현. WA 인증마크 획득에 기여.',
+      title: '접근성은 기본값',
+      desc: 'W3C · WCAG를 기본으로 고령층 · 저시력자용 큰글씨 모드를 선제 제안 · 구현하고, WA 인증마크 획득에 기여했습니다.',
     },
     {
       icon: 'component',
-      title: '재사용 컴포넌트 설계',
-      desc: 'Figma · Zeplin 스펙을 정확히 해석해, 유지보수 효율을 고려한 컴포넌트 기반 화면을 구현합니다.',
+      title: '한 번 만들어, 여러 번',
+      desc: 'Figma · Zeplin 스펙을 정확히 해석해 반복 패턴을 공통 컴포넌트로 추출 — 팀 컨벤션에 맞춘, 유지보수 가능한 구조로 만듭니다.',
     },
     {
       icon: 'collab',
-      title: '디자이너 ↔ 개발자 조율',
-      desc: 'AIA UX팀 등과 직접 협업하며 요구사항을 정확히 반영하고 일정 · 품질을 함께 관리해 왔습니다.',
+      title: '혼자가 아니라, 같이',
+      desc: 'AIA UX팀 등과 직접 협업하며 요구사항을 정확히 반영하고, 일정과 품질을 함께 만들어 왔습니다.',
+    },
+    {
+      icon: 'ai',
+      title: '도구는 AI, 설계는 사람',
+      desc: '20년 UX · 설계 안목으로 AI 코딩 도구(Claude · ChatGPT)를 페어 프로그래머처럼 부려, 기획부터 배포까지 1인 풀스택으로 구현합니다.',
     },
   ],
   // 스킬 — 능숙도별로 솔직하게 분류
@@ -176,6 +181,11 @@ export const whatIDo: {
       items: ['Vue2', 'Vue3', 'Buefy UI', 'React', 'Chakra UI'],
     },
     {
+      group: 'AI 협업',
+      level: '현재형',
+      items: ['AI 페어 프로그래밍', 'Claude', 'ChatGPT', '프롬프트 설계', '1인 풀스택'],
+    },
+    {
       group: '협업 도구',
       items: ['Figma', 'Zeplin', 'Adobe XD', 'Photoshop', 'Git', 'Jira', 'Slack', 'Notion'],
     },
@@ -193,6 +203,9 @@ export const whatIDo: {
     'React',
     'Buefy UI',
     'Chakra UI',
+    'AI Pair Programming',
+    'Claude',
+    'ChatGPT',
     'Web Standards',
     'Web Accessibility',
     'WCAG',
@@ -258,29 +271,46 @@ export const projects: {
         {
           label: '한 줄 정의',
           items: [
-            '배달앱은 매출은 보여줘도 ‘실제로 얼마 남는지’는 안 보여줍니다. 판매가에서 원가 · 포장비 · 배달비 · 수수료 · 쿠폰을 뺀 메뉴별 진짜 손익을 사장님이 직접 확인하는 수동 입력형 계산 도구입니다.',
+            '배달앱은 매출은 보여줘도 ‘실제로 얼마 남는지’는 안 보여줍니다. 판매가에서 원가 · 포장비 · 배달비 · 수수료 · 쿠폰을 뺀 메뉴별 진짜 손익을, 사장님이 직접 입력한 값 기준으로 확인하는 수동 입력형 계산 도구입니다.',
           ],
         },
         {
           label: '문제 발견',
           items: [
-            '자영업 커뮤니티에서 ‘배달 수수료 계산이 안 돼 답답하다’는 불만이 반복되는 것을 확인하고 시작. 기존 도구가 못 푸는 실제 현장 문제에서 출발.',
+            '자영업 커뮤니티 · 카페에서 ‘배달 수수료 계산이 안 돼 답답하다’는 불만이 반복되는 것을 확인하고 시작. 기존 도구가 못 푸는 실제 현장 문제에서 출발한 프로젝트입니다.',
           ],
         },
         {
           label: '나의 역할',
           items: [
             '시장 문제 정의부터 기획 · 정보구조 · UI 설계 · 구현까지 1인 담당',
-            '20년 UX · 퍼블리싱 경험으로 AI 코딩 도구를 지휘해 풀스택 구현',
-            '직접 작성한 기술개발지시서 기반으로 진행 · 계산/검증/저장 로직 모듈 분리',
+            '20년 UX · 퍼블리싱 경험으로 AI 코딩 도구(Claude · ChatGPT)를 지휘해 풀스택 구현',
+            '직접 작성한 기술개발지시서를 기준으로 계산 · 입력 검증 · 저장 로직을 모듈(utils)로 분리',
             '배달앱 계정 · 정산 · 고객정보를 받지 않는 민감정보 비수집 보안 설계',
           ],
         },
         {
-          label: '로드맵',
+          label: '핵심 포인트',
           accent: true,
           items: [
-            'v1 손익 계산기(현재) → 운영 보조(엑셀 · AI 해석 · 리뷰 답글) → 매장 진단(상권 · SWOT · 벤치마킹) → 소상공인 사업화',
+            'AI를 코딩 대행이 아니라 페어 프로그래머로 활용 — 설계 판단과 검수는 직접',
+            '접근성(라벨 연결 · 색상 외 에러 표시 · 320px 대응)을 기획 단계부터 반영',
+            '데이터 최소수집 보안 설계 — 브라우저 로컬 저장, 언제든 전체 삭제 가능',
+          ],
+        },
+        {
+          label: '로드맵',
+          items: [
+            '지금 · v1 — 메뉴별 손익 계산기: 무료 계산기 → 가게 · 메뉴 관리 → 결과 저장 → 시나리오 비교',
+            '다음 · v1.5 — 운영 보조: 엑셀 리포트 · AI 해석(현재 mock) · 리뷰 답글 도우미',
+            '확장 · v2 — 매장 진단: 상권 분석 · SWOT · 전국 우수 리뷰 매장 벤치마킹 (실제 LLM 연동은 v2 계획)',
+            '목표 — 소상공인 대상 사업화',
+          ],
+        },
+        {
+          label: '진행 상태',
+          items: [
+            '개발 진행률 약 30% · 정부 AI 활용지원 사업 신청 단계(선정 전) · 외식업 소상공인 매장에 1차 적용 예정',
           ],
         },
       ],
@@ -326,9 +356,9 @@ export const projects: {
         'Vue + TypeScript 환경에서 재사용 컴포넌트 설계 · 제작 및 공통 기준 수립',
       ],
       highlights: [
-        'Vue2 · Vue3 병행 수행으로 버전별 개발 방식 차이를 이해하고 각 환경에 적합하게 적용',
-        '재사용 컴포넌트 설계로 UI 일관성 확보 및 개발 효율 향상',
-        'TypeScript 기반 작업으로 타입 안전성 · 유지보수성 강화',
+        '검진 파트=Vue2 레거시, 케어 파트=Vue3 신규 — 한 서비스에 공존하는 두 버전의 차이를 컴포넌트 단위로 흡수',
+        '혈당(글루코스) 추이 등 건강 데이터 시각화 차트를 직접 구현하고, 차트용 데이터 샘플링 처리',
+        '반복되는 화면 패턴을 공통 컴포넌트로 추출하고 디자인 토큰 · SCSS 구조를 정리해 검진 · 케어 파트 간 스타일 중복 제거',
       ],
     },
     {
@@ -390,7 +420,8 @@ export const projects: {
         'AIA QI 디자인 시스템 기반 개발 — AIA UX팀과 직접 소통하며 요구사항 반영',
       ],
       highlights: [
-        '다양한 재사용 컴포넌트를 직접 설계 · 제작',
+        '반복되는 화면 패턴을 공통 컴포넌트로 추출해 신규 화면 개발 공수를 줄임',
+        '건강 데이터 시각화 차트를 직접 제작하고, 표시용 데이터 샘플링까지 처리',
         'AIA QI 디자인 시스템 적용 과정에서 UX팀과 긴밀히 소통',
         '고령층 · 저시력자용 큰글씨 모드를 선제적으로 고려해 성공적으로 구현 — 사용자 접근성 향상',
       ],
@@ -492,13 +523,12 @@ export const labs = {
   body: 'AI를 활용한 바이브 코딩으로 빠르게 만들고, GitHub · 오픈소스 생태계를 적극 활용해 실제 동작하는 앱 서비스로 완성합니다. <br />호기심에서 출발한 실험을 ‘쓸 수 있는 제품’까지 끌고 가는 공간입니다.',
   // APPRESSO(appresso.vercel.app) 라인업과 동일하게 — Now 섹션 카드 기준
   items: [
-    { label: '가성비대장', verified: '소상공인 배달 손익 계산기' },
-    { label: '유튜브 분석', verified: '채널 · 영상 데이터 분석' },
-    { label: '조회수가 터진 영상', verified: '트렌드 발굴' },
-    { label: 'Art Studio', verified: 'AI 이미지 생성' },
-    { label: 'TTS Studio', verified: 'AI 음성 합성' },
-    { label: '포춘쿠키', verified: '오늘의 운세' },
-    { label: '번호 추천기', verified: '번호 빈도 · 패턴 분석' },
+    { label: '소상공인 배달 손익 계산기', verified: 'AI 페어 프로그래밍 · 1인 풀스택' },
+    { label: '유튜브 채널 분석 도구', verified: '채널 · 영상 데이터 등급 분석' },
+    { label: '콘텐츠 트렌드 분석 도구', verified: '플랫폼별 인기 영상 · 키워드' },
+    { label: 'AI 이미지 생성 도구', verified: '이미지 일괄 자동 생성' },
+    { label: 'AI 음성 합성 도구', verified: 'TTS 음성 콘텐츠 제작' },
+    { label: '데이터 통계 분석 도구', verified: '빈도 · 패턴 분석 · 시각화' },
   ],
   moreLabel: 'Labs 둘러보기',
   moreHref: '#labs',

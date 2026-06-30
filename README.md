@@ -84,6 +84,40 @@ npm run preview  # 빌드 결과 미리보기
 
 3. Vercel 프로젝트 환경변수에도 `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`를 등록합니다.
 
+## 관리자 — 접속 현황 (`#admin`)
+
+헤더 우측 끝의 흐릿한 `login` → Supabase Auth 로그인 → 접속 현황 대시보드
+(누적/오늘/일자별/페이지별/유입경로/최근 방문)를 표시합니다.
+
+1. 방문 로그 테이블 + RLS를 생성합니다(익명은 INSERT만, 조회는 인증 사용자만).
+
+   ```sql
+   create table if not exists visit_logs (
+     id bigint generated always as identity primary key,
+     created_at timestamptz not null default now(),
+     path text not null default '/',
+     referrer text,
+     user_agent text
+   );
+   alter table visit_logs enable row level security;
+
+   -- 익명 방문자는 자신의 방문을 기록(INSERT)만 가능
+   create policy "anon insert visit" on visit_logs
+     for insert to anon with check (true);
+
+   -- 조회는 로그인한 관리자만 (대시보드)
+   create policy "auth read visit" on visit_logs
+     for select to authenticated using (true);
+   ```
+
+2. **관리자 계정 생성**: Supabase 대시보드 → Authentication → Users → *Add user*
+   로 이메일/비밀번호 계정을 만듭니다.
+   Authentication → Sign In / Providers에서 **이메일 신규 가입(Allow new signups)을
+   비활성화**해 직접 만든 계정만 로그인되도록 합니다.
+
+3. 로컬/배포 모두 `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`가 있어야 동작합니다.
+   환경변수가 없으면 `#admin`은 "비활성화" 안내만 표시됩니다.
+
 ## 배포 (Vercel)
 
 - Framework Preset: **Vite**

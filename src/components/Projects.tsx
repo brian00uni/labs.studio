@@ -60,33 +60,29 @@ export function Projects() {
                     : 'border-paper-200 hover:border-amber-deep/40'
                 }`}
               >
-                {p.image && (
-                  <span className="relative block aspect-[16/5] w-full overflow-hidden bg-white">
-                    <img
-                      src={p.image}
-                      alt={`${p.brand} ${p.tagline}`}
-                      loading="lazy"
-                      className="h-full w-full object-contain p-4 transition-transform duration-300 group-hover:scale-105"
-                    />
+                <span className="flex h-full w-full flex-1 flex-col items-start p-6">
+                  {p.badge && (
+                    <span className="rounded-full bg-amber-deep/10 px-2.5 py-1 text-[13px] font-bold text-amber-deep">
+                      {p.badge}
+                    </span>
+                  )}
+                  <span className={`flex items-center gap-3 ${p.badge ? 'mt-3' : ''}`}>
+                    {p.image && (
+                      <img
+                        src={p.image}
+                        alt={`${p.brand} ${p.tagline}`}
+                        loading="lazy"
+                        className="h-10 w-10 shrink-0 rounded-full border border-paper-200 bg-white object-contain p-1"
+                      />
+                    )}
+                    <span className="flex flex-col">
+                      <span className="text-lg font-bold text-ink">{p.brand}</span>
+                      <span className="mt-0.5 text-sm text-ink-soft">{p.tagline}</span>
+                    </span>
                   </span>
-                )}
-                <span
-                  className={`flex w-full flex-1 flex-col items-start px-6 pb-6 ${
-                    p.image ? 'pt-0' : 'pt-6'
-                  }`}
-                >
-                {p.badge && (
-                  <span className="rounded-full bg-amber-deep/10 px-2.5 py-1 text-[13px] font-bold text-amber-deep">
-                    {p.badge}
+                  <span className="mt-auto pt-5 text-xs font-medium text-amber-deep opacity-0 transition-opacity group-hover:opacity-100">
+                    자세히 보기 →
                   </span>
-                )}
-                <span className={`text-lg font-bold text-ink ${p.badge ? 'mt-3' : ''}`}>
-                  {p.brand}
-                </span>
-                <span className="mt-1 text-sm text-ink-soft">{p.tagline}</span>
-                <span className="mt-auto pt-5 text-xs font-medium text-amber-deep opacity-0 transition-opacity group-hover:opacity-100">
-                  자세히 보기 →
-                </span>
                 </span>
               </button>
             </Reveal>

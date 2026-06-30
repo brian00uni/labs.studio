@@ -7,11 +7,15 @@ import { TrackRecord } from '../components/TrackRecord'
 import { Labs } from '../components/Labs'
 import { Contact } from '../components/Contact'
 import { Footer } from '../components/Footer'
+import { AuthCorner } from '../components/AuthCorner'
+import { useVisitLog } from '../hooks/useVisitLog'
 
 // 서사 순서: HERO → NOW → WHAT I DO → PROJECTS → TRACK RECORD → LABS → CONTACT
 export default function Home() {
+  useVisitLog()
   return (
     <>
+      <AuthCorner />
       <Header />
       <main>
         <Hero />

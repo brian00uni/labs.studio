@@ -1,5 +1,5 @@
 import type { IconType } from 'react-icons'
-import { LuAccessibility, LuArrowLeftRight, LuComponent, LuUsersRound } from 'react-icons/lu'
+import { LuAccessibility, LuArrowLeftRight, LuBot, LuComponent, LuUsersRound } from 'react-icons/lu'
 import { whatIDo } from '../data/content'
 import { Marquee } from './Marquee'
 import { Reveal } from './Reveal'
@@ -11,6 +11,7 @@ const strengthIcons: Record<string, IconType> = {
   accessibility: LuAccessibility, // 접근성
   component: LuComponent, // 재사용 컴포넌트
   collab: LuUsersRound, // 디자이너 ↔ 개발자 협업
+  ai: LuBot, // AI 페어 프로그래밍
 }
 
 export function WhatIDo() {
