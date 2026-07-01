@@ -9,7 +9,7 @@ function MarqueeRow({ items }: { items: string[] }) {
             {item}
           </span>
           <span className="text-amber-bright/80" aria-hidden>
-            ✦
+            •
           </span>
         </li>
       ))}
